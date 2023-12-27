@@ -40,7 +40,7 @@ export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 export FOX_USE_BASH_SHELL=1
 export FOX_ASH_IS_BASH=1
 export OF_ENABLE_LPTOOLS=1
-export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;"
+export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;/proinfo;"
 export FOX_DELETE_AROMAFM=1
 
 # R11.0.0 Settings
