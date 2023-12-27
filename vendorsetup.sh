@@ -46,9 +46,7 @@ export FOX_DELETE_AROMAFM=1
 # R1.0.0 Settings
 export FOX_VERSION="R1.0.0"
 export FOX_BUILD_TYPE="Beta"
-
-
-
+export OF_MAINTAINER="isus203"
 
 if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
 		export | grep "FOX" >> $FOX_BUILD_LOG_FILE
