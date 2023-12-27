@@ -1,4 +1,4 @@
-# TWRP device tree for TECNO SPARK 9 Pro (KH7n)
+# OrangeFox device tree for TECNO SPARK 9 Pro (KH7n)
 
 ## Device image
 ![kh7n](https://main-cdn.sbermegamarket.ru/big2/hlr-system/-19/594/051/051/025/28/600008702613b0.jpg)
