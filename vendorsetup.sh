@@ -36,7 +36,9 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 
 
-
+# R12 Settings
+export FOX_VERSION="R12"
+export FOX_BUILD_TYPE="Beta"
 
 
 
