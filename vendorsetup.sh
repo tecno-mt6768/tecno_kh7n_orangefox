@@ -43,8 +43,8 @@ export OF_ENABLE_LPTOOLS=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;"
 export FOX_DELETE_AROMAFM=1
 
-# R1 Settings
-export FOX_VERSION="R1"
+# R12 Settings
+export FOX_VERSION="R12"
 export FOX_BUILD_TYPE="Beta"
 
 
