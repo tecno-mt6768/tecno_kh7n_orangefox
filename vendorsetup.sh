@@ -43,8 +43,8 @@ export OF_ENABLE_LPTOOLS=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;/proinfo;"
 export FOX_DELETE_AROMAFM=1
 
-# R11.0.0 Settings
-export FOX_VERSION="R11.0.0"
+# R12.1 Settings
+export FOX_VERSION=$(date +%y.%m.%d)-isus203
 export FOX_BUILD_TYPE="Beta"
 export OF_MAINTAINER="isus203"
 
