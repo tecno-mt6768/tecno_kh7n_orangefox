@@ -18,11 +18,11 @@ Front-camera | 32 MP, Built-in flash
 Bluetooth | 5.0 
 Wi-Fi | 802.11 a/b/g/n  2.4 GHz, 5 GHz
 
-### Working
+## Working
 Unknown
 
-### Issues
+## Issues
 Unknown
 
-# Credits
+## Credits
 [yurxxl](https://4pda.to/forum/index.php?showuser=8545777),[azwhikaru](https://github.com/azwhikaru)
