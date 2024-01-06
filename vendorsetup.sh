@@ -33,16 +33,13 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 export TARGET_DEVICE_ALT="KH7n"
-export OF_AB_DEVICE=1
+export FOX_AB_DEVICE=1
 export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 export FOX_USE_BASH_SHELL=1
 export FOX_ASH_IS_BASH=1
-export FOX_USE_TAR_BINARY=1
-export FOX_USE_SED_BINARY=1
-export FOX_USE_XZ_UTILS=1
 export OF_ENABLE_LPTOOLS=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;/proinfo;"
 export FOX_DELETE_AROMAFM=1
