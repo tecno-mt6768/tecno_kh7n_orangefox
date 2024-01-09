@@ -129,13 +129,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
-# Additional binaries & libraries needed for recovery
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libgatekeeper \
-    libgatekeeper_aidl \
-    libkeymaster41 \
-    libpuresoftkeymasterdevice
-
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
@@ -171,14 +164,9 @@ TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_NANO := true
 TW_EXCLUDE_BASH := true
 
-# Decryption
-#TW_INCLUDE_CRYPTO := true
-#TW_INCLUDE_CRYPTO_FBE := true
-#TW_INCLUDE_FBE_METADATA_DECRYPT := true
+# Crypto
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper_aidl.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
