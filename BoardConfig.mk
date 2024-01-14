@@ -161,7 +161,7 @@ TW_NO_FASTBOOT_BOOT := true
 #BOARD_HAS_NO_REAL_SDCARD := true
 #TW_EXCLUDE_MTP := false
 TW_EXCLUDE_TZDATA := true
-TW_EXCLUDE_NANO := true
+#TW_EXCLUDE_NANO := true
 TW_EXCLUDE_BASH := true
 
 # Crypto
