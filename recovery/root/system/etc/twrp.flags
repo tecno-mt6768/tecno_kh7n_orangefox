@@ -21,23 +21,39 @@
 /boot            emmc     /dev/block/by-name/boot                               flags=display="Boot";backup=1;slotselect;flashimg=1
 /vbmeta_vendor   emmc     /dev/block/by-name/vbmeta_vendor                      flags=display="Vbmeta Vendor";slotselect;flashimg=1
 /vbmeta_system   emmc     /dev/block/by-name/vbmeta_system                      flags=display="Vbmeta System";slotselect;flashimg=1
-/logo           emmc       /dev/block/by-name/logo 
-/expdb          emmc       /dev/block/by-name/expdb 
-/seccfg         emmc       /dev/block/by-name/seccfg 
-/tee1           emmc       /dev/block/by-name/tee1 
-/tee2           emmc       /dev/block/by-name/tee2 
-/scp1           emmc       /dev/block/by-name/scp1 
-/scp2           emmc       /dev/block/by-name/scp2 
-/sspm_1         emmc       /dev/block/by-name/sspm_1 
-/sspm_2         emmc       /dev/block/by-name/sspm_2 
-/md1img         emmc       /dev/block/by-name/md1img 
-/md1dsp         emmc       /dev/block/by-name/md1dsp 
-/gz1            emmc       /dev/block/by-name/gz1 
-/gz2            emmc       /dev/block/by-name/gz2 
-/spmfw          emmc       /dev/block/by-name/spmfw 
-/boot_para      emmc       /dev/block/by-name/boot_para 
+/logo           emmc       /dev/block/by-name/logo
+flags=display="Logo"
+/expdb          emmc       /dev/block/by-name/expdb
+flags=display="Expdb"
+/seccfg         emmc       /dev/block/by-name/seccfg
+flags=display="Seccfg"
+/tee1           emmc       /dev/block/by-name/tee1
+flags=display="trustzone1"
+/tee2           emmc       /dev/block/by-name/tee2
+flags=display="trustzone2"
+/scp1           emmc       /dev/block/by-name/scp1
+flags=display="Scp1"
+/scp2           emmc       /dev/block/by-name/scp2
+flags=display="Scp2"
+/sspm_1         emmc       /dev/block/by-name/sspm_1
+flags=display="Sspm_1"
+/sspm_2         emmc       /dev/block/by-name/sspm_2
+flags=display="Sspm_2"
+/md1img         emmc       /dev/block/by-name/md1img
+flags=display="Md1img"
+/md1dsp         emmc       /dev/block/by-name/md1dsp
+flags=display="Md1dsp"
+/gz1            emmc       /dev/block/by-name/gz1
+flags=display="Gz1"
+/gz2            emmc       /dev/block/by-name/gz2
+flags=display="Gz2"
+/spmfw          emmc       /dev/block/by-name/spmfw
+flags=display="Spmfw"
+/boot_para      emmc       /dev/block/by-name/boot_para
+flags=display="Boot_para"
 /dtbo           emmc       /dev/block/by-name/dtbo                              flags=display="Dtbo"
-/otp            emmc       /dev/block/by-name/otp 
+/otp            emmc       /dev/block/by-name/otp
+flags=display="Otp"
 /vbmeta         emmc       /dev/block/by-name/vbmeta                            flags=display="Vbmeta";flashimg=1
 /tkv            emmc       /dev/block/by-name/tkv                               flags=display="Tkv"
 # External Storage
