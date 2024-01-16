@@ -1,1 +1,17 @@
+# Hardware
+ro.hardware=mt6768
+ro.vendor.mediatek.platform=MT6768
+ro.sf.lcd_density=480
+ro.treble.enabled=true
+ro.frp.pst=/dev/block/by-name/frp
+# ADB
+ro.adb.secure=0
+# USB
+ro.sys.usb.storage.type=mtp
+# Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
+# TEE
+ro.vendor.mtk_tee_gp_support=1
+ro.vendor.mtk_trustonic_tee_support=1
+# Gatekeeper
+ro.hardware.gatekeeper=trustonic
