@@ -2,7 +2,6 @@
 ro.hardware=mt6768
 ro.vendor.mediatek.platform=MT6768
 ro.sf.lcd_density=480
-ro.treble.enabled=true
 ro.frp.pst=/dev/block/by-name/frp
 # ADB
 ro.adb.secure=0
