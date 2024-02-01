@@ -38,7 +38,7 @@
 /nvram          emmc       /dev/block/by-name/nvram                             flags=display="Nvram";backup=1;flashimg=1
 /proinfo        emmc       /dev/block/by-name/proinfo                           flags=display="Proinfo";backup=1;flashimg=1
 
-#Persistent Firmware & Properties
+# Persistent Firmware & Properties
 /tranfs         ext4       /dev/block/by-name/tranfs                            flags=display="Tranfs";backup=1;flashimg=1
 /bootloader     emmc       /dev/block/by-name/lk                                 flags=display="Bootloader";backup=1;flashimg=1
 /bootloader2    emmc       /dev/block/by-name/lk2                                flags=display="Bootloader2";backup=1;flashimg=1
