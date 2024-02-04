@@ -65,19 +65,30 @@ service vendor.keymaster-4-1-trustonic /system/bin/android.hardware.keymaster@4.
     seclabel u:r:recovery:s0
 
 service vendor.gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
-#   interface android.hardware.gatekeeper@1.0::IGatekeeper default
+    interface android.hardware.gatekeeper@1.0::IGatekeeper default
     class hal
     user root
     group root
     disabled
     seclabel u:r:recovery:s0
 
+service keymaster_attestation-1-1 /system/bin/vendor.mediatek.hardware.keymaster_attestation@1.1-service
+    interface vendor.mediatek.hardware.keymaster_attestation@1.0::IKeymasterDevice default
+    interface vendor.mediatek.hardware.keymaster_attestation@1.1::IKeymasterDevice default
+    class hal
+    user system
+    group system
+    disabled
+
 on property:hwservicemanager.ready=true
-    start paytrigger_hal_service
+    write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry ++ (FBE encrypted)"
     start mobicore
+    write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry -- (FBE encrypted)"
+    start paytrigger_hal_service
     start tee-1-1
     start vendor.keymaster-4-1-trustonic
     start vendor.gatekeeper-1-0
+    start keymaster_attestation-1-1
 
 on property:ro.crypto.state=unsupported
     stop paytrigger_hal_service
@@ -87,6 +98,7 @@ on property:ro.crypto.state=unsupported
     stop vendor.gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
+    stop keymaster_attestation-1-1
 
 on property:ro.crypto.state=unencrypted
     stop paytrigger_hal_service
@@ -96,6 +108,7 @@ on property:ro.crypto.state=unencrypted
     stop vendor.gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
+    stop keymaster_attestation-1-1
 
 on property:twrp.decrypt.done=true
     stop paytrigger_hal_service
@@ -105,6 +118,7 @@ on property:twrp.decrypt.done=true
     stop vendor.gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
+    stop keymaster_attestation-1-1
 
 on post-fs-data
     mkdir /data/vendor_de 0770 system system
