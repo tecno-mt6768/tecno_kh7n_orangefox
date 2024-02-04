@@ -134,7 +134,7 @@ TW_BACKUP_EXCLUSIONS := /data/fonts
 #BOARD_HAS_NO_REAL_SDCARD := true
 #TW_EXCLUDE_MTP := true
 TW_EXCLUDE_TZDATA := true
-TW_EXCLUDE_NANO := true
+#TW_EXCLUDE_NANO := true
 TW_EXCLUDE_BASH := true
 
 # Crypto
