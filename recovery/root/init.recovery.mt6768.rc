@@ -57,13 +57,6 @@ service tee-1-1 /system/bin/vendor.trustonic.tee@1.1-service
     disabled
     seclabel u:r:recovery:s0
 
-service vendor.mediatek.hardware.keymaster_attestation@1.1-service /system/bin/vendor.mediatek.hardware.keymaster_attestation@1.1-service
-    class early_hal
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
-
 service vendor.keymaster-4-1-trustonic /system/bin/android.hardware.keymaster@4.1-service.trustonic
     class early_hal
     user root
