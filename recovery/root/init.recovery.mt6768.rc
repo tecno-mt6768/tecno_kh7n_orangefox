@@ -65,7 +65,6 @@ service vendor.keymaster-4-1-trustonic /system/bin/android.hardware.keymaster@4.
     seclabel u:r:recovery:s0
 
 service vendor.gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
-    interface android.hardware.gatekeeper@1.0::IGatekeeper default
     class hal
     user root
     group root
