@@ -60,7 +60,7 @@ service tee-1-1 /system/bin/vendor.trustonic.tee@1.1-service
 service vendor.mediatek.hardware.keymaster_attestation@1.1-service /system/bin/vendor.mediatek.hardware.keymaster_attestation@1.1-service
     class early_hal
     user root
-    group root drmrpc
+    group root
     disabled
     seclabel u:r:recovery:s0
 
