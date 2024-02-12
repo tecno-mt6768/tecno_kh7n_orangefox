@@ -12,5 +12,10 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # TEE
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
+ro.vendor.tran.trans_pay_tee=1
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
+####
+ro.hardware.kmsetkey=trustonic
+ro.hardware.paytrigger=trustonic
+
