@@ -65,6 +65,7 @@ service vendor.keymaster-4-1-trustonic /system/bin/android.hardware.keymaster@4.
     seclabel u:r:recovery:s0
 
 service vendor.gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
+    interface android.hardware.gatekeeper@1.0::IGatekeeper default
     class hal
     user root
     group root
@@ -78,6 +79,14 @@ service keymaster_attestation-1-1 /system/bin/vendor.mediatek.hardware.keymaster
     user system
     group system
     disabled
+    seclabel u:r:recovery:s0
+
+service trustonic_check_keybox_service /system/bin/kmsetkey_ca.trustonic -c
+    class late_start
+    user system
+    group system
+    oneshot
+    seclabel u:r:recovery:s0
 
 on property:hwservicemanager.ready=true
     write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry ++ (FBE encrypted)"
@@ -88,6 +97,7 @@ on property:hwservicemanager.ready=true
     start vendor.keymaster-4-1-trustonic
     start vendor.gatekeeper-1-0
     start keymaster_attestation-1-1
+    start trustonic_check_keybox_service
 
 on property:ro.crypto.state=unsupported
     stop paytrigger_hal_service
@@ -98,6 +108,7 @@ on property:ro.crypto.state=unsupported
     stop servicemanager
     stop hwservicemanager
     stop keymaster_attestation-1-1
+    stop trustonic_check_keybox_service
 
 on property:ro.crypto.state=unencrypted
     stop paytrigger_hal_service
@@ -108,6 +119,7 @@ on property:ro.crypto.state=unencrypted
     stop servicemanager
     stop hwservicemanager
     stop keymaster_attestation-1-1
+    stop trustonic_check_keybox_service
 
 on property:twrp.decrypt.done=true
     stop paytrigger_hal_service
@@ -118,6 +130,7 @@ on property:twrp.decrypt.done=true
     stop servicemanager
     stop hwservicemanager
     stop keymaster_attestation-1-1
+    stop trustonic_check_keybox_service
 
 on post-fs-data
     mkdir /data/vendor_de 0770 system system
