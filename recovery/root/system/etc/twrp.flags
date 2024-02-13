@@ -12,7 +12,7 @@
 
 # Userdata/Metadata partitions
 /metadata       ext4       /dev/block/by-name/md_udc                            flags=display="Metadata";backup=1;flashimg=1
-/data           f2fs       /dev/block/by-name/userdata                          flags=display="Data";fileencryption=aes-256-xts:aes-256-cts:v2
+#/data           f2fs       /dev/block/by-name/userdata                          flags=display="Data";fileencryption=aes-256-xts:aes-256-cts:v2
 
 # Other partitions
 /boot_para       emmc     /dev/block/by-name/boot_para                          flags=display="Boot_para";backup=1;flashimg=1
