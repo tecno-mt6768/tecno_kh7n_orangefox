@@ -119,13 +119,13 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_SYSTEM := system
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+TARGET_COPY_OUT_VENDOR := vendor
+
 # AB
 AB_OTA_UPDATER := true
-
-# Workaround for copying error vendor files to recovery ramdisk
-TARGET_COPY_OUT_PRODUCT := product
-TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_SYSTEM_EXT = system_ext
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
