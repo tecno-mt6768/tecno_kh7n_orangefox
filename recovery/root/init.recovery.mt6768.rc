@@ -121,7 +121,7 @@ on property:ro.crypto.state=unencrypted
     stop keymaster_attestation-1-1
     stop trustonic_check_keybox_service
 
-on property:twrp.decrypt.done=true
+on property:twrp.decrypt.done=true && property:twrp.all.users.decrypted=true
     stop paytrigger_hal_service
     stop mobicore
     stop tee-1-1
