@@ -1,11 +1,5 @@
-# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6768/fstab.in.mt6768"
-# 1 "<built-in>" 1
-# 1 "<built-in>" 3
-# 341 "<built-in>" 3
-# 1 "<command line>" 1
-# 1 "<built-in>" 2
-# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6768/fstab.in.mt6768" 2
-# 160 "vendor/mediatek/proprietary/hardware/fstab/mt6768/fstab.in.mt6768"
+#fstab file by isus203 for Tecno Spark 9 Pro - KH7n-H6919DE-S-OP-230611V978 - kh7n_h6919
+
 system /system ext4 ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 vendor /vendor ext4 ro wait,slotselect,avb,logical,first_stage_mount
 product /product ext4 ro wait,slotselect,avb,logical,first_stage_mount
