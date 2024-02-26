@@ -21,6 +21,8 @@ LOCAL_PATH := device/tecno/KH7n
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_PLATFORM := mt6768
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -88,13 +90,12 @@ PRODUCT_PACKAGES += \
 TARGET_RECOVERY_DEVICE_MODULES += \
     libgatekeeper \
     libgatekeeper_aidl \
-    libkeymaster4 \
     libkeymaster41 \
     libpuresoftkeymasterdevice
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper_aidl.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
+
