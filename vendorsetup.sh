@@ -41,10 +41,10 @@ export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 export FOX_USE_BASH_SHELL=1
 export FOX_ASH_IS_BASH=1
 export OF_ENABLE_LPTOOLS=1
-export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;/proinfo;/nvdata;"
+export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;/proinfo;"
 export FOX_DELETE_AROMAFM=1
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-export FOX_EXCLUDE_NANO_EDITOR=0
+export FOX_EXCLUDE_NANO_EDITOR=1
 
 # OTA
 export OF_KEEP_DM_VERITY=1
