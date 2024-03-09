@@ -44,7 +44,7 @@ export OF_ENABLE_LPTOOLS=1
 export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;/proinfo;"
 export FOX_DELETE_AROMAFM=1
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-export FOX_EXCLUDE_NANO_EDITOR=1
+export FOX_EXCLUDE_NANO_EDITOR=0
 
 # OTA
 export OF_KEEP_DM_VERITY=1
@@ -55,7 +55,6 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 export FOX_VERSION=$(date +%y.%m.%d)-isus203
 export FOX_BUILD_TYPE="Beta"
 export OF_MAINTAINER="isus203"
-
 
 # Necessary to decrypt most laurel_sprout ROMs
 export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
