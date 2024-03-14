@@ -34,6 +34,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
+# Device 
+TW_DEVICE_VERSION := Tecno Stark 9 Pro KH7n - isus203
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := KH7n
 TARGET_NO_BOOTLOADER := true
@@ -182,8 +185,8 @@ TARGET_USES_LOGD := true
 # Tools / Resetprop and magiskboot
 TW_EXCLUDE_BASH := true
 TW_EXCLUDE_TZDATA := true
-TW_INCLUDE_RESETPROP := true
-TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_RESETPROP := false
+TW_INCLUDE_LIBRESETPROP := false
 TW_NO_FASTBOOT_BOOT := true
 TW_INCLUDE_PYTHON := false
 TW_EXCLUDE_NANO := false
@@ -223,6 +226,3 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
-
-# Device 
-TW_DEVICE_VERSION := Tecno Stark 9 Pro KH7n - isus203
