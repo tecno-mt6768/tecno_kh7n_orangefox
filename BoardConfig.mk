@@ -205,10 +205,6 @@ TW_H_OFFSET := -100
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_CRYPTO_FS_TYPE := "f2fs"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/by-name/userdata"
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,inlinecrypt,resgid=1065,errors=panic,data=ordered"
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
