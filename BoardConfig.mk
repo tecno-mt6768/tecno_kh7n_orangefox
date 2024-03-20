@@ -34,11 +34,8 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
-# Device 
-TW_DEVICE_VERSION := Tecno Stark 9 Pro KH7n - isus203
-
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := KH7n
+TARGET_BOOTLOADER_BOARD_NAME := Tecno-KH7n
 TARGET_NO_BOOTLOADER := true
 
 # Platform
@@ -158,7 +155,6 @@ TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP-Specific configuration
 #TW_EXCLUDE_MTP := false
-TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_TWRPAPP := false
 TW_EXCLUDE_APEX := false
 
@@ -185,15 +181,14 @@ TARGET_USES_LOGD := true
 # Tools / Resetprop and magiskboot
 TW_EXCLUDE_BASH := true
 TW_EXCLUDE_TZDATA := true
-TW_INCLUDE_RESETPROP := false
-TW_INCLUDE_LIBRESETPROP := false
+TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_REPACKTOOLS := false
 TW_NO_FASTBOOT_BOOT := true
 TW_INCLUDE_PYTHON := false
 TW_EXCLUDE_NANO := false
-BOARD_HAS_NO_REAL_SDCARD := false
-TW_INCLUDE_REPACKTOOLS := false
 
-# Density
+# Density / StatusBar
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TW_THEME := portrait_hdpi
 TARGET_SCREEN_WIDTH := 1080
@@ -217,12 +212,13 @@ TW_CRYPTO_FS_OPTIONS := "rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,inline
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
-TW_HAS_MTP := true
-TW_NO_USB_STORAGE := false
-TW_INTERNAL_STORAGE_PATH := "/data/media/0"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_MTP_DEVICE := /dev/mtp_usb
-TW_DEFAULT_EXTERNAL_STORAGE := true
+#BOARD_HAS_NO_REAL_SDCARD := true 
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
+
+# PBRP_config
+#PB_TORCH_PATH := "/sys/devices/virtual/torch/torch/torch_level"
+#PB_TORCH_MAX_BRIGHTNESS := 1
+
+# Device 
+TW_DEVICE_VERSION := Tecno Stark 9 Pro KH7n - isus203
