@@ -57,7 +57,7 @@ export FOX_BUILD_TYPE="Beta"
 export OF_MAINTAINER="isus203"
 
 # Necessary to decrypt most laurel_sprout ROMs
-#export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
+export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
 
 # let's see what are our build VARs
 if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
