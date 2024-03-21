@@ -155,7 +155,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP-Specific configuration
-TW_EXCLUDE_MTP := true 
+#TW_EXCLUDE_MTP := true 
 TW_EXCLUDE_TWRPAPP := true 
 TW_EXCLUDE_APEX := true 
 TW_OEM_BUILD := true
@@ -210,7 +210,7 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_REAL_SDCARD := true 
+#BOARD_HAS_NO_REAL_SDCARD := true 
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 
