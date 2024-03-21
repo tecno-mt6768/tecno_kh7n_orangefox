@@ -162,7 +162,7 @@ TW_OEM_BUILD := true
 
 # TWRP Configuration
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-#TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
@@ -181,14 +181,16 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
 # Tools / Resetprop and magiskboot
-TW_EXCLUDE_BASH := true
-TW_EXCLUDE_TZDATA := true
-#TW_INCLUDE_RESETPROP := true
-#TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_REPACKTOOLS := false
+TW_EXCLUDE_BASH := false
+TW_EXCLUDE_TZDATA := false
+TW_INCLUDE_RESETPROP := true 
+TW_INCLUDE_LIBRESETPROP := true 
+TW_INCLUDE_REPACKTOOLS := true 
 TW_NO_FASTBOOT_BOOT := true
-TW_INCLUDE_PYTHON := false
-TW_EXCLUDE_NANO := false
+TW_EXCLUDE_PYTHON := true 
+TW_EXCLUDE_NANO := true 
+TW_EXCLUDE_LPTOOLS := true
+TW_EXCLUDE_LPDUMP := true
 
 # Density / StatusBar
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
@@ -200,13 +202,13 @@ TW_Y_OFFSET := 100
 TW_H_OFFSET := -100
 
 # Selinux
-#SEPOLICY_IGNORE_NEVERALLOWS := true
-#SELINUX_IGNORE_NEVERALLOWS := true
+SEPOLICY_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Crypto
-#TW_INCLUDE_CRYPTO := true
-#TW_INCLUDE_CRYPTO_FBE := true
-#TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
