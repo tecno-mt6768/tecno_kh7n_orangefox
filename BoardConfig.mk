@@ -187,7 +187,6 @@ TW_EXCLUDE_APEX := true
 #TW_OEM_BUILD := true
 
 # Density / StatusBar
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TW_INPUT_BLACKLIST := "hbtp_vm"
