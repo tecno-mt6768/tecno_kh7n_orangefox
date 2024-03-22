@@ -187,10 +187,10 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 
 # TWRP-Specific configuration
-#TW_EXCLUDE_MTP := true
+TW_EXCLUDE_MTP := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
-TW_OEM_BUILD := true
+#TW_OEM_BUILD := true
 
 # Density / StatusBar
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
