@@ -156,12 +156,7 @@ TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP Configuration
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BACKUP_EXCLUSIONS := /FFiles/fonts
-TW_MAX_BRIGHTNESS := 2047
-TW_DEFAULT_BRIGHTNESS := 1200
 TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := ru
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -173,9 +168,8 @@ TARGET_USES_LOGD := true
 # Tools / Resetprop and magiskboot
 TW_EXCLUDE_BASH := true
 TW_EXCLUDE_TZDATA := true
-TW_INCLUDE_RESETPROP := true
-TW_INCLUDE_LIBRESETPROP := true
-#TW_INCLUDE_REPACKTOOLS := true
+#TW_INCLUDE_RESETPROP := true
+#TW_INCLUDE_LIBRESETPROP := true
 TW_NO_FASTBOOT_BOOT := true
 TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_NANO := true
@@ -187,13 +181,18 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
 
 # TWRP-Specific configuration
-TW_EXCLUDE_MTP := true
+#TW_EXCLUDE_MTP := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
 #TW_OEM_BUILD := true
 
 # Density / StatusBar
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_MAX_BRIGHTNESS := 2047
+TW_DEFAULT_BRIGHTNESS := 1200
 TW_THEME := portrait_hdpi
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2408
@@ -202,13 +201,13 @@ TW_Y_OFFSET := 100
 TW_H_OFFSET := -100
 
 # Selinux
-#SEPOLICY_IGNORE_NEVERALLOWS := true
-#SELINUX_IGNORE_NEVERALLOWS := true
+SEPOLICY_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
+#TW_INCLUDE_CRYPTO := true
+#TW_INCLUDE_CRYPTO_FBE := true
+#TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
