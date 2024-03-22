@@ -155,22 +155,22 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP-Specific configuration
-#TW_EXCLUDE_MTP := true 
-TW_EXCLUDE_TWRPAPP := true 
-TW_EXCLUDE_APEX := true 
+#TW_EXCLUDE_MTP := true
+TW_EXCLUDE_TWRPAPP := true
+TW_EXCLUDE_APEX := true
 #TW_OEM_BUILD := true
 
 # TWRP Configuration
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_BACKUP_EXCLUSIONS := /FFiles/fonts
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
-TW_SCREEN_BLANK_ON_BOOT := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := ru
-TW_BACKUP_EXCLUSIONS := /FFiles/fonts
+TW_SCREEN_BLANK_ON_BOOT := true
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
