@@ -181,8 +181,8 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
 # Tools / Resetprop and magiskboot
-TW_EXCLUDE_BASH := false
-TW_EXCLUDE_TZDATA := false
+TW_EXCLUDE_BASH := true 
+TW_EXCLUDE_TZDATA := true 
 TW_INCLUDE_RESETPROP := true 
 TW_INCLUDE_LIBRESETPROP := true 
 TW_INCLUDE_REPACKTOOLS := true 
