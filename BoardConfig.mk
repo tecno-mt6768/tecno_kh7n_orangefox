@@ -154,12 +154,6 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
-# TWRP-Specific configuration
-#TW_EXCLUDE_MTP := true
-TW_EXCLUDE_TWRPAPP := true
-TW_EXCLUDE_APEX := true
-#TW_OEM_BUILD := true
-
 # TWRP Configuration
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
@@ -191,6 +185,12 @@ TW_NO_SCREEN_BLANK := true
 TARGET_USES_MKE2FS := true
 TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
+
+# TWRP-Specific configuration
+#TW_EXCLUDE_MTP := true
+TW_EXCLUDE_TWRPAPP := true
+TW_EXCLUDE_APEX := true
+TW_OEM_BUILD := true
 
 # Density / StatusBar
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
