@@ -2,6 +2,12 @@
 
 #<mnt_point>      <type>                <device>                                                 <mnt_flags and options>
 
+#Super section 
+/system_root       ext4         /dev/block/mapper/system                             flags=display="System";backup=1;flashimg=1
+/vendor            ext4         /dev/block/mapper/vendor                             flags=display="Vendor";backup=1;flashimg=1
+/product           ext4         /dev/block/mapper/product                            flags=display="Product";backup=1;flashimg=1
+/system_ext        ext4         /dev/block/mapper/system_ext                         flags=display="System_ext";backup=1;flashimg=1
+
 # Userdata/Metadata partitions
 /metadata          ext4         /dev/block/by-name/md_udc                            flags=display="Metadata";backup=1;flashimg=1
 /data              f2fs         /dev/block/by-name/userdata                          flags=display="Data";fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption,
