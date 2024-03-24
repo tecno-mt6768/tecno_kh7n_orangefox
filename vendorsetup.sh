@@ -38,7 +38,7 @@ export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-export OF_QUICK_BACKUP_LIST="/boot;/data;/nvram;/proinfo;"
+export OF_QUICK_BACKUP_LIST="/boot;/data;"
 export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 export FOX_EXCLUDE_NANO_EDITOR=1
 
