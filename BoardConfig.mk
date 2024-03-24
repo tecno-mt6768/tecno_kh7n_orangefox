@@ -183,8 +183,8 @@ TW_USE_TOOLBOX := true
 
 # TWRP-Specific configuration
 #TW_EXCLUDE_MTP := true
-TW_EXCLUDE_TWRPAPP := true
-TW_EXCLUDE_APEX := true
+TW_EXCLUDE_TWRPAPP := false
+TW_EXCLUDE_APEX := false
 #TW_OEM_BUILD := true
 
 # Density / StatusBar
