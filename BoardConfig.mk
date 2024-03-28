@@ -155,7 +155,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP Configuration
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_BACKUP_EXCLUSIONS := /FFiles/fonts
 TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := ru
@@ -213,7 +212,6 @@ TW_H_OFFSET := -100
 RECOVERY_SDCARD_ON_DATA := true
 #BOARD_HAS_NO_REAL_SDCARD := true 
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 
 # Device 
 TW_DEVICE_VERSION := Tecno Stark 9 Pro KH7n - isus203
