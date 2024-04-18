@@ -34,13 +34,17 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
+# AB
+AB_OTA_UPDATER := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := KH7n
-#TARGET_BOOTLOADER_BOARD_NAME := CY-KH7N-H6919
 TARGET_NO_BOOTLOADER := true
 
 # Platform
+BOARD_USES_MTK_HARDWARE := true
 TARGET_BOARD_PLATFORM := mt6768
+PRODUCT_PLATFORM := mt6768
 TARGET_USES_UEFI := true
 
 # Kernel
@@ -113,7 +117,6 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Partitions configs
-#BOARD_RAMDISK_USE_LZMA := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
@@ -123,7 +126,6 @@ BOARD_ROOT_EXTRA_FOLDERS += metadata tranfs
 
 # Partitions size
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
 
 # Dynamic Partitions
 BOARD_SUPER_PARTITION_SIZE := 8837398528
@@ -145,9 +147,6 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
-# AB
-AB_OTA_UPDATER := true
-
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -155,7 +154,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP Configuration
-TW_BACKUP_EXCLUSIONS := /FFiles/fonts
+TW_BACKUP_EXCLUSIONS := /Files/fonts
 TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := ru
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -169,7 +168,7 @@ TW_EXCLUDE_BASH := true
 TW_EXCLUDE_TZDATA := true
 #TW_INCLUDE_RESETPROP := true
 #TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_REPACKTOOLS := false
+TW_INCLUDE_REPACKTOOLS := true
 TW_NO_FASTBOOT_BOOT := true
 TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_NANO := true
@@ -182,9 +181,8 @@ TW_USE_TOOLBOX := true
 
 # TWRP-Specific configuration
 #TW_EXCLUDE_MTP := true
-TW_EXCLUDE_TWRPAPP := true 
-TW_EXCLUDE_APEX := true 
-#TW_OEM_BUILD := false (does not work bootlub)
+TW_EXCLUDE_TWRPAPP := true
+TW_EXCLUDE_APEX := true
 
 # Density / StatusBar
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
@@ -193,6 +191,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_THEME := portrait_hdpi
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2408
 TARGET_SCREEN_DENSITY := 480
 TW_Y_OFFSET := 100
 TW_H_OFFSET := -100
@@ -210,6 +210,12 @@ TW_H_OFFSET := -100
 RECOVERY_SDCARD_ON_DATA := true
 #BOARD_HAS_NO_REAL_SDCARD := true 
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
+
+# PBRP_config
+#PB_GO := true 
+#PB_TORCH_PATH := "/sys/devices/virtual/torch/torch/torch_level"
+#PB_TORCH_MAX_BRIGHTNESS := 1
 
 # Device 
-TW_DEVICE_VERSION := Tecno Stark 9 Pro KH7n - isus203
+TW_DEVICE_VERSION := isus203-@4pda/telegram
