@@ -1,7 +1,7 @@
 import /init.recovery.trustonic.rc
 
 on init
-    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw:/system_root/system/lib64:/system_root/system/lib64/hw
 
 on fs
     mkdir /mnt/vendor/persist 0771 system system
@@ -70,7 +70,6 @@ service vendor.keymaster-4-1-trustonic /vendor/bin/android.hardware.keymaster@4.
     seclabel u:r:recovery:s0
 
 service vendor.gatekeeper-1-0 /vendor/bin/android.hardware.gatekeeper@1.0-service
-    interface android.hardware.gatekeeper@1.0::IGatekeeper default
     class hal
     user root
     group root
@@ -116,6 +115,11 @@ on property:twrp.decrypt.done=true && property:twrp.all.users.decrypted=true
     stop servicemanager
     stop hwservicemanager
 
+on property:vold.decrypt=trigger_restart_framework
+    write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry ++ (FDE encrypted)"
+    mkdir /data/vendor/mcRegistry 0775 system system
+    write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry -- (FDE encrypted)"
+    
 on post-fs-data
     mkdir /data/vendor_de 0770 system system
     mkdir /data/vendor_de/0 0770 system system 
