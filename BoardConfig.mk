@@ -213,4 +213,4 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 
 # Device 
-TW_DEVICE_VERSION := isus203-@4pda/telegram
+TW_DEVICE_VERSION := Tecno Spark 9 Pro - isus203
