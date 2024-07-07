@@ -9,7 +9,7 @@ system_ext        /system_ext     ext4         ro          wait,slotselect,avb,l
 #<mnt_point>                    <device>    <type>                                <mnt_flags and options>
 /dev/block/by-name/md_udc       /metadata    ext4     noatime,nosuid,nodev,discard wait,check,formattable,first_stage_mount
 
-/dev/block/by-name/userdata     /data        f2fs     noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065,inlinecrypt,tran_gc wait,check,formattable,quota,latemount,resize,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption
+/dev/block/by-name/userdata     /data        f2fs     noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065,inlinecrypt,tran_gc wait,check,formattable,quota,latemount,resize,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
 
 /dev/block/by-name/misc         /misc        emmc     defaults defaults
 
