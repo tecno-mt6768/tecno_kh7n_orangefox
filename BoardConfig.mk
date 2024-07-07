@@ -153,8 +153,8 @@ TARGET_RECOVERY_FSTAB  := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP Configuration
-TW_BACKUP_EXCLUSIONS    := /Files/fonts
-TW_EXTRA_LANGUAGES      := false
+TW_BACKUP_EXCLUSIONS    := /Files/backup
+TW_EXTRA_LANGUAGES      := true
 TW_DEFAULT_LANGUAGE     := ru
 TW_SCREEN_BLANK_ON_BOOT := true
 
@@ -164,8 +164,8 @@ TARGET_USES_LOGD    := true
 
 # Tools / Resetprop and magiskboot / TWRP-Specific configuration
 
-#TW_INCLUDE_RESETPROP    := true
-#TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_RESETPROP    := true
+TW_INCLUDE_LIBRESETPROP := true
 #TW_INCLUDE_REPACKTOOLS  := true
 
 TW_NO_FASTBOOT_BOOT := true
@@ -178,11 +178,11 @@ TW_USE_TOOLBOX      := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX    := true
 TW_EXCLUDE_PYTHON  := true
-TW_EXCLUDE_NANO    := true
+TW_EXCLUDE_NANO    := false
 TW_EXCLUDE_LPTOOLS := true
 TW_EXCLUDE_LPDUMP  := true
-TW_EXCLUDE_BASH    := true
-TW_EXCLUDE_TZDATA  := true
+TW_EXCLUDE_BASH    := false
+TW_EXCLUDE_TZDATA  := false
 
 # Density / StatusBar
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
@@ -199,19 +199,24 @@ TW_Y_OFFSET := 100
 TW_H_OFFSET := -100
 
 # Selinux
-#SEPOLICY_IGNORE_NEVERALLOWS := true
-#SELINUX_IGNORE_NEVERALLOWS  := true
+SEPOLICY_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS  := true
 
 # Crypto
-#TW_INCLUDE_CRYPTO               := true
-#TW_INCLUDE_CRYPTO_FBE           := true
-#TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_INCLUDE_CRYPTO               := true
+TW_INCLUDE_CRYPTO_FBE           := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 # Storage
 RECOVERY_SDCARD_ON_DATA     := true
 #BOARD_HAS_NO_REAL_SDCARD   := true 
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
+
+# PBRP_config
+#PB_GO := true 
+#PB_TORCH_PATH := "/sys/devices/virtual/torch/torch/torch_level"
+#PB_TORCH_MAX_BRIGHTNESS := 1
 
 # Device 
 TW_DEVICE_VERSION := Tecno Spark 9 Pro - isus203
