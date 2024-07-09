@@ -7,10 +7,10 @@
 /product              ext4       /dev/block/mapper/product                            flags=display="Product";storage
 /system_ext           ext4       /dev/block/mapper/system_ext                         flags=display="System_ext";storage
 
-/system_image         emmc       /dev/block/mapper/system                             flags=display="System";backup=1;flashimg=1;slotselect
-/vendor_image         emmc       /dev/block/mapper/vendor                             flags=display="Vendor";backup=1;flashimg=1;slotselect
-/product_image        emmc       /dev/block/mapper/product                            flags=display="Product";backup=1;flashimg=1;slotselect
-/system_ext_image     emmc       /dev/block/mapper/system_ext                         flags=display="System_ext";backup=1;flashimg=1;slotselect
+/system_image         emmc       /dev/block/mapper/system                             flags=display="System_image";backup=1;flashimg=1;slotselect
+/vendor_image         emmc       /dev/block/mapper/vendor                             flags=display="Vendor_image";backup=1;flashimg=1;slotselect
+/product_image        emmc       /dev/block/mapper/product                            flags=display="Product_image";backup=1;flashimg=1;slotselect
+/system_ext_image     emmc       /dev/block/mapper/system_ext                         flags=display="System_ext_image";backup=1;flashimg=1;slotselect
 
 # Userdata/Metadata/Tranfs partitions
 /metadata          ext4         /dev/block/by-name/md_udc                            flags=display="Metadata";backup=1;flashimg=1
