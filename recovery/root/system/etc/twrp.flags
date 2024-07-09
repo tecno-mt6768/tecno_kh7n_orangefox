@@ -1,8 +1,13 @@
 #fstab file by isus203 for Tecno Spark 9 Pro - KH7n-H6919DE-S-OP-230611V978 - kh7n_h6919
 
 #<mnt_point>      <type>                <device>                                                 <mnt_flags and options>
-#Super section 
-/system_image    emmc       /dev/block/mapper/system                             flags=display="System";backup=1;flashimg=1;slotselect
+#Super section
+/system_root          ext4       /dev/block/mapper/system                             flags=display="System";storage
+/vendor               ext4       /dev/block/mapper/vendor                             flags=display="Vendor";storage
+/product              ext4       /dev/block/mapper/product                            flags=display="Product";storage
+/system_ext           ext4       /dev/block/mapper/system_ext                         flags=display="System_ext";storage
+
+/system_image         emmc       /dev/block/mapper/system                             flags=display="System";backup=1;flashimg=1;slotselect
 /vendor_image         emmc       /dev/block/mapper/vendor                             flags=display="Vendor";backup=1;flashimg=1;slotselect
 /product_image        emmc       /dev/block/mapper/product                            flags=display="Product";backup=1;flashimg=1;slotselect
 /system_ext_image     emmc       /dev/block/mapper/system_ext                         flags=display="System_ext";backup=1;flashimg=1;slotselect
@@ -38,10 +43,10 @@
 /logo              emmc         /dev/block/by-name/logo                              flags=display="Logo";backup=1;flashimg=1;slotselect
 /expdb             emmc         /dev/block/by-name/expdb                             flags=display="Expdb";backup=1;flashimg=1
 /seccfg            emmc         /dev/block/by-name/seccfg                            flags=display="Seccfg";backup=1;flashimg=1
-/tee              emmc         /dev/block/by-name/tee.                              flags=display="trustzone";backup=1;flashimg=1;slotselect
-/scp              emmc         /dev/block/by-name/scp                              flags=display="Scp";backup=1;flashimg=1;slotselect
-/sspm            emmc         /dev/block/by-name/sspm                            flags=display="Sspm";backup=1;flashimg=1;slotselect
-/gz               emmc         /dev/block/by-name/gz                               flags=display="Gz";backup=1;flashimg=1;slotselect
+/tee               emmc         /dev/block/by-name/tee.                              flags=display="trustzone";backup=1;flashimg=1;slotselect
+/scp               emmc         /dev/block/by-name/scp                               flags=display="Scp";backup=1;flashimg=1;slotselect
+/sspm              emmc         /dev/block/by-name/sspm                              flags=display="Sspm";backup=1;flashimg=1;slotselect
+/gz                emmc         /dev/block/by-name/gz                                flags=display="Gz";backup=1;flashimg=1;slotselect
 /spmfw             emmc         /dev/block/by-name/spmfw                             flags=display="Spmfw";backup=1;flashimg=1;slotselect
 /otp               emmc         /dev/block/by-name/otp                               flags=display="Otp";backup=1;flashimg=1
 /tkv               emmc         /dev/block/by-name/tkv                               flags=display="Tkv";backup=1;flashimg=1
