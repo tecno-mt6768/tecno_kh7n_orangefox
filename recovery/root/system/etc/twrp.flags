@@ -2,14 +2,14 @@
 
 #<mnt_point>      <type>                <device>                                                 <mnt_flags and options>
 #Super section 
-/system_root    ext4       /dev/block/mapper/system                             flags=display="System";storage;backup=1;flashimg=1
-/vendor         ext4       /dev/block/mapper/vendor                             flags=display="Vendor";storage;backup=1;flashimg=1
-/product        ext4       /dev/block/mapper/product                            flags=display="Product";storage;backup=1;flashimg=1
-/system_ext     ext4       /dev/block/mapper/system_ext                         flags=display="System_ext";storage;backup=1;flashimg=1
+/system_image    emmc       /dev/block/mapper/system                             flags=display="System";backup=1;flashimg=1;slotselect
+/vendor_image         emmc       /dev/block/mapper/vendor                             flags=display="Vendor";backup=1;flashimg=1;slotselect
+/product_image        emmc       /dev/block/mapper/product                            flags=display="Product";backup=1;flashimg=1;slotselect
+/system_ext_image     emmc       /dev/block/mapper/system_ext                         flags=display="System_ext";backup=1;flashimg=1;slotselect
 
 # Userdata/Metadata/Tranfs partitions
 /metadata          ext4         /dev/block/by-name/md_udc                            flags=display="Metadata";backup=1;flashimg=1
-/data              f2fs         /dev/block/by-name/userdata                          flags=display="Data";storage;fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption
+/data              f2fs         /dev/block/by-name/userdata                          flags=display="Data";storage;fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption,
 /tranfs            ext4         /dev/block/by-name/tranfs                            flags=display="Tranfs";backup=1;flashimg=1
 
 # Other partitions
@@ -33,20 +33,15 @@
 /proinfo           emmc         /dev/block/by-name/proinfo                           flags=display="Proinfo";backup=1;flashimg=1
 
 # Persistent Firmware & Properties
-/bootloader        emmc         /dev/block/by-name/lk_a                                flags=display="Bootloader (lk_a)";backup=1;flashimg=1
-/bootloader2       emmc         /dev/block/by-name/lk_b                               flags=display="Bootloader (lk_b)";backup=1;flashimg=1
+/bootloader        emmc         /dev/block/by-name/lk                                flags=display="Bootloader (lk)";backup=1;flashimg=1;slotselect
 /para              emmc         /dev/block/by-name/para                              flags=display="Para";backup=1;flashimg=1
 /logo              emmc         /dev/block/by-name/logo                              flags=display="Logo";backup=1;flashimg=1;slotselect
 /expdb             emmc         /dev/block/by-name/expdb                             flags=display="Expdb";backup=1;flashimg=1
 /seccfg            emmc         /dev/block/by-name/seccfg                            flags=display="Seccfg";backup=1;flashimg=1
-/tee1              emmc         /dev/block/by-name/tee_a                              flags=display="trustzone1";backup=1;flashimg=1
-/tee2              emmc         /dev/block/by-name/tee_b                              flags=display="trustzone2";backup=1;flashimg=1
-/scp1              emmc         /dev/block/by-name/scp_a                              flags=display="Scp1";backup=1;flashimg=1
-/scp2              emmc         /dev/block/by-name/scp_b                              flags=display="Scp2";backup=1;flashimg=1
-/sspm_1            emmc         /dev/block/by-name/sspm_a                            flags=display="Sspm_1";backup=1;flashimg=1
-/sspm_2            emmc         /dev/block/by-name/sspm_b                            flags=display="Sspm_2";backup=1;flashimg=1
-/gz1               emmc         /dev/block/by-name/gz_a                               flags=display="Gz1";backup=1;flashimg=1
-/gz2               emmc         /dev/block/by-name/gz_b                               flags=display="Gz2";backup=1;flashimg=1
+/tee              emmc         /dev/block/by-name/tee.                              flags=display="trustzone";backup=1;flashimg=1;slotselect
+/scp              emmc         /dev/block/by-name/scp                              flags=display="Scp";backup=1;flashimg=1;slotselect
+/sspm            emmc         /dev/block/by-name/sspm                            flags=display="Sspm";backup=1;flashimg=1;slotselect
+/gz               emmc         /dev/block/by-name/gz                               flags=display="Gz";backup=1;flashimg=1;slotselect
 /spmfw             emmc         /dev/block/by-name/spmfw                             flags=display="Spmfw";backup=1;flashimg=1;slotselect
 /otp               emmc         /dev/block/by-name/otp                               flags=display="Otp";backup=1;flashimg=1
 /tkv               emmc         /dev/block/by-name/tkv                               flags=display="Tkv";backup=1;flashimg=1
