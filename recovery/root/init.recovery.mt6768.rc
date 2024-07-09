@@ -94,9 +94,6 @@ on property:hwservicemanager.ready=true
     start vendor.gatekeeper-1-0
 
 on property:ro.crypto.state=unsupported
-    write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry ++ (unencrypted)"
-    mkdir /data/vendor/mcRegistry 0775 system system
-    write /proc/bootprof "MOBICORE: create /data/vendor/mcRegistry -- (unencrypted)"
     stop mobicore
     stop tee-1-1
     stop vendor.keymaster-4-1-trustonic
