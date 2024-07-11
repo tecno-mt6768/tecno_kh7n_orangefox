@@ -218,8 +218,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.
 
 # PBRP_config
 #PB_GO := true 
-#PB_TORCH_PATH := "/sys/devices/virtual/torch/torch/torch_level"
-#PB_TORCH_MAX_BRIGHTNESS := 1
+PB_TORCH_PATH := "/sys/devices/virtual/torch/torch/torch_level"
+PB_TORCH_MAX_BRIGHTNESS := 1
 
 # Device 
 TW_DEVICE_VERSION := Tecno Spark 9 Pro - isus203
