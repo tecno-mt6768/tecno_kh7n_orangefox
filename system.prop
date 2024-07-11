@@ -3,7 +3,6 @@ Build.BRAND=MTK
 ro.hardware=mt6768
 ro.vendor.mediatek.platform=MT6768
 ro.soc.manufacturer=Mediatek
-ro.vendor.tran.version.release=KH7n-H6919DE-S-OP-230611V978
 ro.vendor.mtk_f2fs_enable=1
 ro.vendor.mtk_emmc_support=1
 ro.vendor.mtk_data_config=1
@@ -16,9 +15,6 @@ ro.sys.usb.storage.type=mtp
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
-ro.crypto.metadata.enabled=true
-ro.crypto.support_metadata_encrypt=true
-ro.crypto.uses_fs_ioc_add_encryption_key=true
 ro.crypto.volume.metadata.method=dm-default-key
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.options=::v2
@@ -28,6 +24,10 @@ ro.mtk_key_manager_support=1
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
 ro.vendor.tran.trans_pay_tee=1
+ro.vendor.keymaster_version=4.1
 ro.hardware.gatekeeper=trustonic
 ro.hardware.kmsetkey=trustonic
 ro.hardware.paytrigger=trustonic
+
+####
+ro.treble.enabled=true
