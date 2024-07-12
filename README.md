@@ -28,5 +28,5 @@ Wi-Fi | 802.11 a/b/g/n  2.4 GHz, 5 GHz
 ## Credits
 [@yurxxl](https://4pda.to/forum/index.php?showuser=8545777), [@azwhikaru](https://github.com/azwhikaru)
 
-# I thank you very much for your help 
+## I thank you very much for your help 
 [@lopestom](https://github.com/lopestom)
