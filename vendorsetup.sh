@@ -52,7 +52,7 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
 # R12.1 Settings
 export FOX_VERSION=$(date +%y.%m.%d)-isus203
-export FOX_BUILD_TYPE="beta"
+export FOX_BUILD_TYPE="unofficial"
 export OF_MAINTAINER="isus203"
 
 # Status bar
