@@ -1,7 +1,7 @@
 # OrangeFox device tree for TECNO SPARK 9 Pro (KH7n)
 
 ## Device image
-![kh7n](https://github.com/isus203/tecno_kh7n_orangefox/blob/main/Device_image/30065104b.jpg)
+![kh7n](https://github.com/tecno-mt6768/tecno_kh7n_orangefox/blob/main/Device_image/30065104b.jpg)
 
 ## Device specification
 Basic   | Spec Sheet
