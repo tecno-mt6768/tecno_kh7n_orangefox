@@ -141,7 +141,6 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE    := ext4
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
-
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_PRODUCT    := product
 TARGET_COPY_OUT_VENDOR     := vendor
@@ -184,6 +183,7 @@ TW_EXCLUDE_LPTOOLS := true
 TW_EXCLUDE_LPDUMP  := true
 TW_EXCLUDE_BASH    := false
 TW_EXCLUDE_TZDATA  := false
+TW_INCLUDE_REPACK_TOOL := true
 
 # Density / StatusBar
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
