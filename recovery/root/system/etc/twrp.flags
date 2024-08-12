@@ -21,6 +21,9 @@
 /boot_para         emmc         /dev/block/by-name/boot_para                         flags=display="Boot_para";backup=1;flashimg=1
 /boot              emmc         /dev/block/by-name/boot                              flags=backup=1;display="Boot";flashimg=1;backup=1;slotselect
 
+# Preloader
+/preloader             emmc         /dev/block/by-name/preloader                             flags=backup=1;display="Preloader";flashimg=1;backup=1;slotselect
+
 # AVB partitions
 /dtbo              emmc         /dev/block/by-name/dtbo                              flags=display="Dtbo";backup=1;flashimg=1;slotselect
 /vbmeta            emmc         /dev/block/by-name/vbmeta                            flags=display="Vbmeta";backup=1;flashimg=1;slotselect
@@ -33,7 +36,7 @@
 /nvdata            ext4         /dev/block/by-name/nvdata                            flags=display="Nvdata";backup=1;flashimg=1
 /nvcfg             ext4         /dev/block/by-name/nvcfg                             flags=display="Nvcfg";backup=1;flashimg=1
 /persist           ext4         /dev/block/by-name/persist                           flags=display="Persist";backup=1;flashimg=1
-/persistent        emmc         /dev/block/by-name/frp                               flags=display="Persistent";backup=1;flashimg=1
+/frp        emmc         /dev/block/by-name/frp                               flags=display="FRP";backup=1;flashimg=1
 /nvram             emmc         /dev/block/by-name/nvram                             flags=display="Nvram";backup=1;flashimg=1
 /proinfo           emmc         /dev/block/by-name/proinfo                           flags=display="Proinfo";backup=1;flashimg=1
 
