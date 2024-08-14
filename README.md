@@ -25,6 +25,12 @@ Wi-Fi | 802.11 a/b/g/n  2.4 GHz, 5 GHz
 ## Problems
 - [X] Not known
 
+## Important information 
+The system must be repartitioned 
+
+[Re-partitioning](https://github.com/tecno-mt6768/Re-partitioning-kh7n),
+[Re-partitioning-preloader](https://github.com/tecno-mt6768/Re-partitioning-preloader-kh7n)
+
 ## Credits
 [@yurxxl](https://4pda.to/forum/index.php?showuser=8545777), [@azwhikaru](https://github.com/azwhikaru)
 
