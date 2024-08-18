@@ -3,10 +3,10 @@
 #<mnt_point>         <type>                <device>                                                 <mnt_flags and options>
 
 #Super section
-/system_root          ext4         /dev/block/mapper/system                             flags=display="System";wipeingui;logical
-/vendor               ext4         /dev/block/mapper/vendor                             flags=display="Vendor";wipeingui;logical
-/product              ext4         /dev/block/mapper/product                            flags=display="Product";wipeingui;logical
-/system_ext           ext4         /dev/block/mapper/system_ext                         flags=display="System_ext";wipeingui;logical
+/system_root          ext4         /dev/block/mapper/system                             flags=display="System";wipeingui;logical;removable;slotselect
+/vendor               ext4         /dev/block/mapper/vendor                             flags=display="Vendor";wipeingui;logical;removable;slotselect
+/product              ext4         /dev/block/mapper/product                            flags=display="Product";wipeingui;logical;removable;slotselect
+/system_ext           ext4         /dev/block/mapper/system_ext                         flags=display="System_ext";wipeingui;logical;removable;slotselect
 
 /system_image         emmc         /dev/block/mapper/system                             flags=display="System (image)";backup=1;flashimg=1;slotselect;logical
 /vendor_image         emmc         /dev/block/mapper/vendor                             flags=display="Vendor (image)";backup=1;flashimg=1;slotselect;logical
