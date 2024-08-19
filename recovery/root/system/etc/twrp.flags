@@ -41,7 +41,6 @@
 /frp                             emmc          /dev/block/by-name/frp                              flags=display="FRP";backup=1;flashimg=1
 /nvram                           emmc         /dev/block/by-name/nvram                             flags=display="Nvram";backup=1;flashimg=1
 /proinfo                         emmc         /dev/block/by-name/proinfo                           flags=display="Proinfo";backup=1;flashimg=1
-/flashinfo                       emmc         /dev/block/by-name/flashinfo                         flags=display="Flashinfo";backup=1
 
 # Persistent Firmware & Properties
 /bootloader           emmc         /dev/block/by-name/lk                                flags=display="Bootloader (lk)";backup=1;flashimg=1;slotselect
