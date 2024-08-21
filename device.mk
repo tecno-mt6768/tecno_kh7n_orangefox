@@ -31,7 +31,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 
 # Enable userspace reboot
-$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
 # A/B
 AB_OTA_PARTITIONS += \
