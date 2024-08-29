@@ -38,7 +38,7 @@
 /nvdata               ext4         /dev/block/by-name/nvdata                            flags=display="Nvdata";backup=1;flashimg=1
 /nvcfg                ext4         /dev/block/by-name/nvcfg                             flags=display="Nvcfg";backup=1;flashimg=1
 /persist              ext4         /dev/block/by-name/persist                           flags=display="Persist";backup=1;flashimg=1
-/frp                  emmc         /dev/block/by-name/frp                              flags=display="FRP";backup=1;flashimg=1;removable;wipeingui
+/frp                  emmc         /dev/block/by-name/frp                               flags=display="FRP";backup=1;flashimg=1;removable;wipeingui
 /nvram                emmc         /dev/block/by-name/nvram                             flags=display="Nvram";backup=1;flashimg=1
 /proinfo              emmc         /dev/block/by-name/proinfo                           flags=display="Proinfo";backup=1;flashimg=1
 
@@ -48,7 +48,7 @@
 /logo                 emmc         /dev/block/by-name/logo                              flags=display="Logo";backup=1;flashimg=1;slotselect
 /expdb                emmc         /dev/block/by-name/expdb                             flags=display="Expdb";backup=1;flashimg=1
 /seccfg               emmc         /dev/block/by-name/seccfg                            flags=display="Seccfg";backup=1;flashimg=1
-/tee                  emmc         /dev/block/by-name/tee.                              flags=display="trustzone";backup=1;flashimg=1;slotselect
+/tee                  emmc         /dev/block/by-name/tee                               flags=display="trustzone";backup=1;flashimg=1;slotselect
 /scp                  emmc         /dev/block/by-name/scp                               flags=display="Scp";backup=1;flashimg=1;slotselect
 /sspm                 emmc         /dev/block/by-name/sspm                              flags=display="Sspm";backup=1;flashimg=1;slotselect
 /gz                   emmc         /dev/block/by-name/gz                                flags=display="Gz";backup=1;flashimg=1;slotselect
@@ -63,4 +63,4 @@
 
 # Removable Storage
 /external_sd          auto         /dev/block/mmcblk1p1 /dev/block/mmcblk0p1            flags=display="MicroSDcard";storage;wipeingui;removable
-/usb_otg              auto         /dev/block/sda /dev/block/sda1 /dev/block/sdd1       flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8"
+/usb_otg              auto         /dev/block/sda /dev/block/sda1 /dev/block/sdd1       flags=display="USB OTG";storage;wipeingui;removable
