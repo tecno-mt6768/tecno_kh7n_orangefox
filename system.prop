@@ -13,6 +13,12 @@ ro.frp.pst=/dev/block/by-name/frp
 # USB
 ro.sys.usb.storage.type=mtp
 
+# USB BICR function
+ro.sys.usb.bicr=no
+
+# USB MTP WHQL
+ro.sys.usb.mtp.whql.enable=0
+
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.volume.metadata.method=dm-default-key
@@ -28,6 +34,3 @@ ro.vendor.keymaster_version=4.1
 ro.hardware.gatekeeper=trustonic
 ro.hardware.kmsetkey=trustonic
 ro.hardware.paytrigger=trustonic
-
-####
-ro.treble.enabled=true
