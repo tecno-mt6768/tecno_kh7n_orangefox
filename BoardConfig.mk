@@ -217,7 +217,6 @@ RECOVERY_SDCARD_ON_DATA     := true
 #BOARD_HAS_NO_REAL_SDCARD   := true 
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_MTP    := false
-TW_MTP_DEVICE     := /dev/usb-ffs
 
 # Device 
 ifeq ($(TW_DEVICE_VERSION),)
