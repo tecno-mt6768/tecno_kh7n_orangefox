@@ -34,6 +34,10 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
+# Enable CPUSets
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
+
 # AB
 AB_OTA_UPDATER := true
 
@@ -170,6 +174,7 @@ TARGET_USES_LOGD    := true
 TW_INCLUDE_RESETPROP    := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_REPACKTOOLS  := true
+TW_INCLUDE_FUSE_EXFAT := true
 
 TW_NO_FASTBOOT_BOOT := true
 TW_NO_SCREEN_BLANK  := true
@@ -203,6 +208,10 @@ TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CLOCK_POS := 630
 #TW_CUSTOM_BATTERY_POS := 800
 
+# Fix stock .ozip installation
+TW_SKIP_COMPATIBILITY_CHECK := true
+TW_OZIP_DECRYPT_KEY := 0000
+
 # Selinux
 SEPOLICY_IGNORE_NEVERALLOWS := true
 SELINUX_IGNORE_NEVERALLOWS  := true
@@ -217,6 +226,9 @@ RECOVERY_SDCARD_ON_DATA     := true
 #BOARD_HAS_NO_REAL_SDCARD   := true 
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_MTP    := false
+
+# USB Mounting
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 
 # Device 
 ifeq ($(TW_DEVICE_VERSION),)
