@@ -3,21 +3,28 @@ Build.BRAND=MTK
 ro.hardware=mt6768
 ro.vendor.mediatek.platform=MT6768
 ro.soc.manufacturer=Mediatek
-ro.vendor.mtk_f2fs_enable=1
-ro.vendor.mtk_emmc_support=1
-ro.vendor.mtk_data_config=1
+ro.vendor.tran.version.release=KH7n-H6919DE-S-OP-240416V962
 ro.hardware.egl=meow
 ro.sf.lcd_density=480
 ro.frp.pst=/dev/block/by-name/frp
 
 # USB
 ro.sys.usb.storage.type=mtp
-
-# USB BICR function
+persist.adb.nonblocking_ffs=1
 ro.sys.usb.bicr=no
-
-# USB MTP WHQL
 ro.sys.usb.mtp.whql.enable=0
+ro.vendor.tran.otg_lpo_support=1
+ro.vendor.tran.sw_otg_support=1
+ro.secure=0
+ro.adb.secure=0
+ro.debuggable=1
+persist.sys.usb.config=mtp,adb
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.isUsbOtgEnabled=true
+ro.sys.usb.mtp.whql.enable=0
+sys.usb.controller=musb-hdrc
+sys.usb.ffs.aio_compat=true
 
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
@@ -26,6 +33,9 @@ ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.options=::v2
 
 # TEE & Gatekeeper & Keymaster
+ro.vendor.mtk_f2fs_enable=1
+ro.vendor.mtk_emmc_support=1
+ro.vendor.mtk_data_config=1
 ro.mtk_key_manager_support=1
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
