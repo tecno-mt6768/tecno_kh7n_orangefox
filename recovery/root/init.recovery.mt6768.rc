@@ -6,14 +6,15 @@ on init
 
 on init
     setprop crypto.ready 1
+    setprop sys.usb.configfs 1
+    setprop sys.usb.ffs.aio_compat 0
 
-    # OTG
-    mkdir /mnt/media_rw/usb_otg 0700 media_rw media_rw
-    mkdir /usb_otg 0700 root root
-    chmod 0666 /sys/devices/platform/odm/odm:tran_battery/OTG_CTL
-    write /sys/class/power_supply/usb/otg_switch 1
-    write /sys/class/oplus_chg/usb/otg_switch 1
-    
+on fs && property:ro.debuggable=0
+    # distinguish USB shoulde connect or not, i.e. CDP vs SDP
+    write /sys/class/udc/musb-hdrc/device/cmode 2
+    # set charging free due to it wait for USB activation
+    start adbd
+
 on fs
     install_keyring
     
