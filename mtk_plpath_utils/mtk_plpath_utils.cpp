@@ -322,7 +322,7 @@ int main(void) {
     
     string platform = GetProperty("ro.board.platform", "");
     printf("\n%s\n", platform.c_str());
-    if (platform != "mt6739"){
+    if (platform != "mt6768"){
         return -1;
     }
     
