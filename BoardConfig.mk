@@ -17,7 +17,7 @@
 #
 
 # Allow building with minimal manifest
-ALLOW_MISSING_DEPENDENCIES := true
+# ALLOW_MISSING_DEPENDENCIES := true
 
 DEVICE_PATH := device/tecno/KH7n
 
