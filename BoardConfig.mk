@@ -21,6 +21,9 @@
 
 DEVICE_PATH := device/tecno/KH7n
 
+# OTA assert
+TARGET_OTA_ASSERT_DEVICE := TECNO-KH7n,KH7n,kh7n
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
