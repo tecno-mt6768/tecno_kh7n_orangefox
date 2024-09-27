@@ -2,11 +2,6 @@
 #
 
 on early-init
-    setprop sys.usb.configfs 0
-    chmod 777 /sys/devices/platform/odm/odm:tran_battery/OTG_CTL
-    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL "1"
-
-on early-init
     write /sys/module/musb_hdrc/parameters/kernel_init_done 1
 
 on init
