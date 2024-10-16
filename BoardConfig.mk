@@ -154,6 +154,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_PRODUCT    := product
 TARGET_COPY_OUT_VENDOR     := vendor
 
+# Disable system mount
 TW_NO_BIND_SYSTEM := true
 
 # Recovery
@@ -162,19 +163,11 @@ TARGET_SYSTEM_PROP     += $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB  := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
-# TWRP Configuration
-TW_BACKUP_EXCLUSIONS    := /Files/backup
-TW_EXTRA_LANGUAGES      := true
-TW_DEFAULT_LANGUAGE     := ru
-TW_SCREEN_BLANK_ON_BOOT := true
-TW_SKIP_ADDITIONAL_FSTAB := true
-
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD    := true
 
 # Tools / Resetprop and magiskboot / TWRP-Specific configuration
-
 TW_INCLUDE_RESETPROP    := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_REPACKTOOLS  := true
@@ -196,6 +189,12 @@ TW_EXCLUDE_BASH    := false
 TW_EXCLUDE_TZDATA  := false
 TW_INCLUDE_REPACK_TOOL := true
 
+TW_BACKUP_EXCLUSIONS    := /Files/backup
+TW_EXTRA_LANGUAGES      := true
+TW_DEFAULT_LANGUAGE     := ru
+TW_SCREEN_BLANK_ON_BOOT := true
+TW_SKIP_ADDITIONAL_FSTAB := true
+
 # Density / StatusBar
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
@@ -216,7 +215,8 @@ TW_CUSTOM_CLOCK_POS := 630
 TW_SKIP_COMPATIBILITY_CHECK := true
 TW_OZIP_DECRYPT_KEY := 0000
 
-# Selinux
+# Selinux/Sepolicy
+TWHAVE_SELINUX := true
 SEPOLICY_IGNORE_NEVERALLOWS := true
 SELINUX_IGNORE_NEVERALLOWS  := true
 
