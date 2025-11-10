@@ -61,8 +61,7 @@ export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
 # R12.1 Settings
-
-export FOX_MAINTAINER_PATCH_VERSION=$(date +%y.%m.%d)-isus203
+export FOX_MAINTAINER_PATCH_VERSION=$(date +%y%m%d)
 export FOX_BUILD_TYPE="unofficial"
 export OF_MAINTAINER="isus203"
 
