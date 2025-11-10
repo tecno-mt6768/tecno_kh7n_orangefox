@@ -1,7 +1,3 @@
-# Разрешаем recovery доступ к /data/media для копирования логов (ошибка: E:Unable to chmod file: /data/media/recovery.log)
-allow recovery system_data_file:dir { write add_name remove_name };
-allow recovery system_data_file:file { write create getattr setattr };
-
 # Разрешаем recovery доступ к блочным устройствам и монтированию
 allow recovery block_device:dir search;
 allow recovery { mmc_blk_device sda_device }:blk_file { read write open getattr mount };
@@ -9,3 +5,8 @@ allow recovery untrusted_app_tmpfs:file { read write open };
 
 # Общие разрешения для файловых операций, необходимых для wipe/format
 allow recovery self:capability { setuid setgid net_raw net_admin sys_chroot dac_override };
+
+# Ключевые правила для устранения ошибок, блокирующих сброс
+allow recovery system_data_file:dir { write add_name remove_name search };
+allow recovery system_data_file:file { write create getattr setattr open };
+allow recovery self:capability { setuid setgid dac_override };
