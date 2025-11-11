@@ -15,7 +15,7 @@
 
 # Userdata/Metadata/Tranfs/Storage partitions
 /metadata             ext4         /dev/block/by-name/md_udc                            flags=display="Metadata";backup=1;flashimg=1;wipeingui
-/data                 f2fs         /dev/block/by-name/userdata                          flags=display="Data";storage;wipeingui;fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+/data                 f2fs         /dev/block/by-name/userdata                          flags=display="Data";storage;wipeingui
 /storage              f2fs         /data/media/0                                        flags=display="Internal Storage";usermrf;backup=1;flashimg=1;fsflags="bind";removable
 /tranfs               ext4         /dev/block/by-name/tranfs                            flags=display="Tranfs";backup=1;flashimg=1;wipeingui
 
