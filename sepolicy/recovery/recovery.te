@@ -10,3 +10,6 @@ allow recovery self:capability { setuid setgid net_raw net_admin sys_chroot dac_
 allow recovery system_data_file:dir { write add_name remove_name search };
 allow recovery system_data_file:file { write create getattr setattr open };
 allow recovery self:capability { setuid setgid dac_override };
+
+# Разрешить домену recovery добавлять (регистрировать) сервисы в service_manager
+allow recovery service_manager_service:service_manager add;
