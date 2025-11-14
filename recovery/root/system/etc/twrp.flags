@@ -3,19 +3,14 @@
 #<mnt_point>         <type>                <device>                                                 <mnt_flags and options>
 
 #Super section
-/system_root          ext4         /dev/block/mapper/system                             flags=display="System";logical;slotselect
-/vendor               ext4         /dev/block/mapper/vendor                             flags=display="Vendor";logical;slotselect
-/product              ext4         /dev/block/mapper/product                            flags=display="Product";logical;slotselect
-/system_ext           ext4         /dev/block/mapper/system_ext                         flags=display="System_ext";logical;slotselect
-
-/system_image         emmc         /dev/block/mapper/system                             flags=display="System (image)";backup=1;flashimg=1;slotselect;removable;logical;wipeingui
-/vendor_image         emmc         /dev/block/mapper/vendor                             flags=display="Vendor (image)";backup=1;flashimg=1;slotselect;removable;logical;wipeingui
-/product_image        emmc         /dev/block/mapper/product                            flags=display="Product (image)";backup=1;flashimg=1;slotselect;removable;logical;wipeingui
-/system_ext_image     emmc         /dev/block/mapper/system_ext                         flags=display="System_ext (image)";backup=1;flashimg=1;slotselect;removable;logical;wipeingui
+/system_root          ext4         /dev/block/mapper/system                             flags=display="System";logical;slotselect;backup=1;flashimg=1;removable;wipeingui
+/vendor               ext4         /dev/block/mapper/vendor                             flags=display="Vendor";logical;slotselect;backup=1;flashimg=1;removable;wipeingui
+/product              ext4         /dev/block/mapper/product                            flags=display="Product";logical;slotselect;removable;wipeingui;backup=1;flashimg=1
+/system_ext           ext4         /dev/block/mapper/system_ext                         flags=display="System_ext";logical;slotselect;removable;wipeingui;backup=1;flashimg=1
 
 # Userdata/Metadata/Tranfs/Storage partitions
 /metadata             ext4         /dev/block/by-name/md_udc                            flags=display="Metadata";backup=1;flashimg=1;wipeingui
-/data                 f2fs         /dev/block/by-name/userdata                          flags=display="Data";storage;wipeingui
+/data                 f2fs         /dev/block/by-name/userdata                          flags=display="Data";storage;wipeingui;fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
 /storage              f2fs         /data/media/0                                        flags=display="Internal Storage";usermrf;backup=1;flashimg=1;fsflags="bind";removable
 /tranfs               ext4         /dev/block/by-name/tranfs                            flags=display="Tranfs";backup=1;flashimg=1;wipeingui
 
@@ -48,7 +43,7 @@
 /logo                 emmc         /dev/block/by-name/logo                              flags=display="Logo";backup=1;flashimg=1;slotselect
 /expdb                emmc         /dev/block/by-name/expdb                             flags=display="Expdb";backup=1;flashimg=1
 /seccfg               emmc         /dev/block/by-name/seccfg                            flags=display="Seccfg";backup=1;flashimg=1
-/tee                  emmc         /dev/block/by-name/tee                               flags=display="trustzone";backup=1;flashimg=1;slotselect
+/tee                  emmc         /dev/block/by-name/tee.                              flags=display="trustzone";backup=1;flashimg=1;slotselect
 /scp                  emmc         /dev/block/by-name/scp                               flags=display="Scp";backup=1;flashimg=1;slotselect
 /sspm                 emmc         /dev/block/by-name/sspm                              flags=display="Sspm";backup=1;flashimg=1;slotselect
 /gz                   emmc         /dev/block/by-name/gz                                flags=display="Gz";backup=1;flashimg=1;slotselect
@@ -63,4 +58,5 @@
 
 # Removable Storage
 /external_sd          auto         /dev/block/mmcblk1p1 /dev/block/mmcblk0p1            flags=display="MicroSDcard";storage;wipeingui;removable
-/usb_otg              auto            /dev/block/sda /dev/block/sda1 /dev/block/sdd /dev/block/sdd1                  flags=display="USB OTG";storage;wipeingui;removable
+
+/usb_otg              auto         /dev/block/sda /dev/block/sda1 /dev/block/sdd /dev/block/sdd1                       flags=display="USB OTG";storage;wipeingui;removable
