@@ -51,8 +51,8 @@ export FOX_USE_XZ_UTILS=1
 export FOX_ASH_IS_BASH=1
 export OF_ENABLE_LPTOOLS=1
 
-#Flashlight
-export OF_FL_PATH1=/sys/devices/virtual/torch/torch/torch_level
+#Flashlight doesn't work 
+# export OF_FL_PATH1=/sys/devices/virtual/torch/torch/torch_level
 
 # OTA
 export OF_KEEP_DM_VERITY=1
