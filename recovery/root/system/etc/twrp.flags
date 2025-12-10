@@ -3,12 +3,12 @@
 #<mnt_point>         <type>                <device>                                                 <mnt_flags and options>
 
 #Super section
-/system_root          ext4         /dev/block/mapper/system                             flags=display="System";logical;slotselect;backup=1;flashimg=1;removable;wipeingui
-/vendor               ext4         /dev/block/mapper/vendor                             flags=display="Vendor";logical;slotselect;backup=1;flashimg=1;removable;wipeingui
-/product              ext4         /dev/block/mapper/product                            flags=display="Product";logical;slotselect;removable;wipeingui;backup=1;flashimg=1
-/system_ext           ext4         /dev/block/mapper/system_ext                         flags=display="System_ext";logical;slotselect;removable;wipeingui;backup=1;flashimg=1
+/system_root          emmc         /dev/block/mapper/system                             flags=display="System";logical;slotselect;backup=1;flashimg=1;removable;wipeingui
+/vendor               emmc         /dev/block/mapper/vendor                             flags=display="Vendor";logical;slotselect;backup=1;flashimg=1;removable;wipeingui
+/product              emmc         /dev/block/mapper/product                            flags=display="Product";logical;slotselect;removable;wipeingui;backup=1;flashimg=1
+/system_ext           emmc         /dev/block/mapper/system_ext                         flags=display="System_ext";logical;slotselect;removable;wipeingui;backup=1;flashimg=1
 
-# Userdata/Metadata/Tranfs/Storage partitions
+# Userdata/Metadata/Tranfs/Storage partitions/Magisk Modules
 /metadata             ext4         /dev/block/by-name/md_udc                            flags=display="Metadata";backup=1;flashimg=1;wipeingui
 /data                 f2fs         /dev/block/by-name/userdata                          flags=display="Data";storage;wipeingui;fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
 /storage              f2fs         /data/media/0                                        flags=display="Internal Storage";usermrf;backup=1;flashimg=1;fsflags="bind";removable
