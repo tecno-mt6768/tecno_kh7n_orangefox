@@ -13,6 +13,8 @@
 /data                 f2fs         /dev/block/by-name/userdata                          flags=display="Data";storage;wipeingui;fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
 /storage              f2fs         /data/media/0                                        flags=display="Internal Storage";usermrf;backup=1;flashimg=1;fsflags="bind";removable
 /tranfs               ext4         /dev/block/by-name/tranfs                            flags=display="Tranfs";backup=1;flashimg=1;wipeingui
+/magisk_modules       f2fs         /data/adb/modules                                    flags=display="Magisk Modules";usermrf;fsflags="bind"
+
 
 # Other partitions
 /boot_para            emmc         /dev/block/by-name/boot_para                         flags=display="Boot_para";backup=1;flashimg=1
