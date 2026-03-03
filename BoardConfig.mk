@@ -37,6 +37,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
+TARGET_BOARD_SUFFIX := _64
+TARGET_USES_64_BIT_BINDER := true
+
 # Enable CPUSets
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
@@ -146,6 +149,9 @@ BOARD_SUPER_PARTITION_SIZE   := 9126805504
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_PARTITION_LIST    := system vendor product system_ext
 
+BOARD_SUPER_PARTITION_GROUPS := tecno_dynamic_partitions
+BOARD_TECNO_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_ext
+
 # File systems
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE     := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -172,6 +178,9 @@ TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD    := true
+
+# Fastbootd
+TW_INCLUDE_FASTBOOTD := true
 
 # Tools / Resetprop and magiskboot / TWRP-Specific configuration
 TW_INCLUDE_RESETPROP    := true
