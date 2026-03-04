@@ -8,7 +8,10 @@ ro.hardware.egl=meow
 ro.sf.lcd_density=480
 ro.frp.pst=/dev/block/by-name/frp
 
-# USB
+# Fstab
+ro.postinstall.fstab.prefix=/system
+
+# USB MTP
 ro.sys.usb.storage.type=mtp
 persist.adb.nonblocking_ffs=1
 ro.sys.usb.bicr=no

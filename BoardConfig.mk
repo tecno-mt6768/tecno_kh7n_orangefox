@@ -154,7 +154,7 @@ BOARD_MAIN_SIZE              := 9126805504
 BOARD_SUPER_PARTITION_SIZE   := 9126805504
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_PARTITION_LIST    := system vendor product system_ext
-
+BOARD_TECNO_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := tecno_dynamic_partitions
 BOARD_TECNO_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product system_ext
 
@@ -180,6 +180,10 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_SYSTEM_PROP     += $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB  := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
+
+# Init
+#TARGET_INIT_VENDOR_LIB := libinit_TECNO-KH7n
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_TECNO-KH7n
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
